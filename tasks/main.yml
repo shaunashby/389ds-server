@@ -49,7 +49,7 @@
       # without checking: when the server has been just installed, no
       # certificates and no TLS are available.
       # The condition checks "secure-binds is on (found) OR minssf is not 0 (is set and is not 0)"
-      start_tls: "{{ dirsrv_tls_enforced_initially_binds.rc == 0\
+      start_tls: "{{ dirsrv_tls_enforced_initially_binds.rc == 0 \
       or (dirsrv_tls_enforced_initially_ssf_set.rc == 0 and dirsrv_tls_enforced_initially_ssf.rc == 1) }}"
       bind_dn: "{{ dirsrv_rootdn }}"
       bind_pw: "{{ dirsrv_rootdn_password }}"
